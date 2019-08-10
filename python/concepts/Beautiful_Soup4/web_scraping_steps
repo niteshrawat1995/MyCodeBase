@@ -1,0 +1,15 @@
+STEPS for Scraping : 
+from bs4 import BeautifulSoup
+import requests
+
+1. create soup object by using a HTML file and a parser.
+
+2. search for the particular tag(s) using:
+	a. find('tag-name',class_='class_name') --> first match.
+	b. find_all(''tag-name',class_='class_name'') --> list of all matches.
+
+3. nested tags can be accessed using '.' operator. Eg: find('div',class_='ABC').h1.p.text
+
+4. attribute of a tag can be accessed as a key. Eg: find('div',class_='ABC')['href']
+
+5. in case of inconsitent information put the matches in try-except block.
